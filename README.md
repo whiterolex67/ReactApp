@@ -4,7 +4,7 @@
 # I have created this food ordering application called PARCEL Which is still under development
 
 # We are going to create an application that delivers a homely food
-# NOTE : Double quotes are not required for running commands i just used them to higlight the command.
+# NOTE : Double quotes are not required for running commands I just used them to higlight the command.
 
 
 # How to run this app
