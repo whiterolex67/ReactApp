@@ -118,12 +118,14 @@ body{
     display: inline-flex;
     flex-wrap: wrap;
     border : none;
-    padding : 10px;
     transform: scale(1.5);
 }
-.TotalRestaurents{
-    border:none;
-    opacity : 1;
+.TotalRestaurents > h3 {
+    margin-left : 750px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    border : none;
+    transform: scale(1.5);
 }
 .ErrorPage{
     border: 5px solid;

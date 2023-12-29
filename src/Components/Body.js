@@ -6,11 +6,24 @@ const BodyComponent = () => {
     const [Restaurents,setRestaurents] = useState([]);
     const [SearchText,setSearchText] = useState("");
     const [FilteredRestaurents,setFilteredRestaurents] = useState([]);
+    const [MyLocation,setMyLocation] = useState(["12.9783692","77.6408356"]);
     useEffect(()=> {
         fetchData();
-    },[]);
+    },[MyLocation]);
+    const UserLocationCoords = () => {
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(Location=>{
+                const {latitude,longitude} = Location.coords;
+                console.log(Location);
+                setMyLocation([latitude,longitude]);
+            })
+        }
+        else {
+            console.log("Location settings not available for this device");
+        }
+    }
     const fetchData = async () => {
-        const Data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.4949675&lng=78.41123840000002&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const Data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=" +MyLocation[0] +"&lng="+ MyLocation[1] +"&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const jsonData = await Data.json();
         const updatedJsonData = jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
         console.log(jsonData);
@@ -32,15 +45,24 @@ const BodyComponent = () => {
                         ));
                     }}/>
                 </div>
+                <div>
                 <button className="FilterButton" onClick={() => {
                     setFilteredRestaurents(
                         Restaurents.filter((res) => res.info.avgRating > 4)
                     );
                 }}>
-                Top Rated Kitchens</button>
+                Top Rated Kitchens</button></div>
+                <div>
+                    <button onClick={(e) =>{
+                        UserLocationCoords();
+                    }} className="FilterButton">
+                        Locate Me 🌎
+                    </button>
+                </div>
             </div>
             <div className="TotalRestaurents">
                 <h1>{FilteredRestaurents.length} Kitchens Near you</h1>
+                <h3>Showing Results in {FilteredRestaurents[0].info.areaName}</h3>
             </div>
             <div className="RestaurentCard">
                 {
