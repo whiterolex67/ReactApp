@@ -5,7 +5,8 @@
 
 # We are going to create an application that delivers a homely food
 # NOTE : Double quotes are not required for running commands I just used them to higlight the command.
-
+# requirements - you should have node installed and if you have any CORS policy error just install CORS Allow Cross Origin extension from the chrome store and toggle it ON
+# If CORS extension is not toggling ON in chrome browser for just hosting in local use edge or mozilla because i saw edge is workin on most devices.
 
 # How to run this app
 # step 1 - Clone this repository
