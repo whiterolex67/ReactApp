@@ -13,7 +13,6 @@ class About extends React.Component{
         return (
             <div>
                 <h1>About us Page</h1>
-                <UserClass name = {"First"} subject = {"ReactJS"} place = {"Hyd"}/>
             </div>
         )
     }
