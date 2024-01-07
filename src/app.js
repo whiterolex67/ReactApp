@@ -8,7 +8,6 @@ import Contact from "./Components/Contact";
 import Error from "./Components/Error"; 
 import Kitchens from "./Components/OurKitchens";
 import KitchenMenu from "./Components/KitchenMenu";
-import LocateMe from "./Components/LocateMe";
 /*
   Components in my app - Header,Body,Footer
   Header - Logo component , Options in header component
@@ -47,10 +46,6 @@ const ApplicationRoutes = createBrowserRouter([
         path : '/KitchenMenu/:ID',
         element : <KitchenMenu/>
       },
-      {
-        path: 'Location',
-        element:<LocateMe/>
-      }
     ],
     errorElement:<Error/>
   },

@@ -19,31 +19,31 @@ const KitchenMenu = () => {
         const MenuItemsJsonPath = MenuJson?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards;
         setRestaurentMenuDetails(MenuItemsJsonPath);
         setFilterMenuDetails(MenuItemsJsonPath);
-        console.log(MenuJson);
+        // console.log(MenuJson);
     }
     const {name,areaName,avgRatingString,costForTwoMessage,totalRatingsString} = RestaurentBasicDetails;
     const cuisines = RestaurentBasicDetails.cuisines;
     return (
         <div>
-           <div className="RestaurentNameInMenu">
-           <h1>{name}</h1>
-           <h3>{cuisines && cuisines.join(', ')}</h3>
+           <div className="mt-[1%]">
+           <h1 className="text-6xl text-center">{name}</h1>
+           <h3 className="mt-[1%] ml-[25%] mr-[25%] text-center bg-cuisines text-beauty_black">{cuisines && cuisines.join(', ')}</h3>
            </div>
-           <div className="RestaurentAttributes">
-             <h3>{areaName}</h3>
-             <h3>{costForTwoMessage}</h3>
-             <h3>{avgRatingString} ⭐</h3>
-             <h3>{totalRatingsString}</h3>
+           <div className="flex justify-between ml-[10%] mr-[10%] mt-[1%]">
+             <h3 className=" bg-cuisines text-beauty_black p-[1%]">{areaName}</h3>
+             <h3 className=" bg-cuisines text-beauty_black p-[1%]">{costForTwoMessage}</h3>
+             <h3 className=" bg-cuisines text-beauty_black p-[1%]">{avgRatingString} ⭐</h3>
+             <h3 className=" bg-cuisines text-beauty_black p-[1%]">{totalRatingsString}</h3>
             </div>
-            <div className="MenuSearch">
-                <input value = {SearchText} onChange={(e)=>{
+            <div className="mt-[1%] flex">
+                <input className="w-[70%] p-[1%] ml-[25%] mr-[25%] bg-light_white outline-none" value = {SearchText} onChange={(e)=>{
                     setSearchText(e.target.value);
                     setFilterMenuDetails(RestaurentMenuDetails.filter((Menu) =>
                         Menu.card.info.name.toLowerCase().includes(e.target.value.toLowerCase()) 
                     ))
                 }} type = "text" placeholder = "Search For Food Items                                                                                                                                                                                                                                                                 🔎"/>
             </div>
-            <div className="Menu">
+            <div className="ml-[30%] mt-[0%]">
                 {
                     FilterMenuDetails.map(MenuItems=>(
                         <MenuItem key = {MenuItems.card.info.id} MenuData = {MenuItems.card.info}/>
