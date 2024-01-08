@@ -2,6 +2,7 @@ import RestaurentCardComponent from "./KitchenCard";
 import ShimmerLoading from "./ShimmerLoading"
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Home from "./Home";
 const BodyComponent = () => {
     const [Restaurents,setRestaurents] = useState([]);
     const [SearchText,setSearchText] = useState("");
@@ -26,7 +27,6 @@ const BodyComponent = () => {
         const Data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=" +MyLocation[0] +"&lng="+ MyLocation[1] +"&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const jsonData = await Data.json();
         const updatedJsonData = jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-        // console.log(jsonData);
         setRestaurents(updatedJsonData);
         setFilteredRestaurents(updatedJsonData);
     }
@@ -34,7 +34,7 @@ const BodyComponent = () => {
         return ShimmerLoading();
     }
     return (
-        <div className="BodyComponent">
+        <div className=" bg-green-200">
             <div className = "flex">
             <div className="Search">
                     <input type ="text" value={SearchText} className="m-5 font-bold py-2 px-4 rounded-l bg-light_white outline-none" placeholder="Search                           🔎" 
@@ -61,10 +61,12 @@ const BodyComponent = () => {
                 </div>
             </div>
             <div>
-                <h1 className = "text-3xl ml-[750px]">{FilteredRestaurents.length} Kitchens Near you</h1>
-                <h3 className="text-l ml-[780px]">Showing Results in {FilteredRestaurents[0].info.areaName}</h3>
+                <h1 className = "text-3xl ml-[40%]">{FilteredRestaurents.length} Kitchens Near you</h1>
+                <h3 className="text-l ml-[41.5%]">Showing Results in {
+                    Restaurents[0].info.areaName
+                }</h3>
             </div>
-            <div className="flex flex-wrap m-20">
+            <div className="flex flex-wrap m-[15%] mt-[0%]">
                 {
                     FilteredRestaurents.map(Kitchens=>(
                         <Link to = {"/KitchenMenu/" + Kitchens.info.id} key={Kitchens.info.id}><RestaurentCardComponent Data = {Kitchens.info}/></Link>
