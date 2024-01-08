@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const HeaderComponent = () => {
     const [Login,setLogin] = useState("Login🧓🏽");
     return (
-    <div className = "flex justify-between text-black p-2 font-extrabold bg-light_white">
+    <div className = "flex justify-between text-black p-2 font-extrabold bg-blue-100">
         <div className="p-3">
             <h1 className= "text-5xl tracking-widest">ℙAЯCEL</h1>
         </div>
