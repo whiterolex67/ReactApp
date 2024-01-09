@@ -1,7 +1,14 @@
+import useOnlineStatus from "../utils/useOnlineStatus";
+import Offline from "./offline";
+import { Link } from "react-router-dom";
 const Home = () => {
+    const onlineStatus = useOnlineStatus();
+    if(onlineStatus == false){
+        return <Offline/>
+    }
     return (
-        <div className="flex bg-green-200 h-[100%]">
-            <div className="m-[10%]">
+        <div className="flex h-[100%] bg-green-200 mb-[0%]">
+            <div className="m-[10%] mb-[0%]">
                <h1 className="text-8xl m-[2%]">
                  PARCEL
               </h1>
@@ -9,19 +16,12 @@ const Home = () => {
                 We have 100's of cloud kitchens which delivers quality indian food. Tastes Like Home
              </h2> 
               <h2 className="text-xl m-[2%]">
-                We are also Bringing up the monthly subscriptions
+                We also have monthly subscription based plans
               </h2>
-              {/* <h2 className="text-l">
-              It protects you against many chronic noncommunicable diseases,<br/> 
-              such as heart disease, diabetes and cancer.<br/>
-              Eating a variety of foods and consuming less salt,<br/> 
-              sugars and saturated and industrially-produced trans-fats,<br/> 
-              are essential for healthy diet.<br/> 
-              A healthy diet comprises a combination of different foods.
-              </h2> */}
               <div className="flex">
-              <button className="bg-black text-white m-[2%] p-[2%] mt-[1%] w-[25%]">Get Started</button>
-              <button className="bg-white text-black m-[2%] p-[2%] mt-[1%] w-[25%]">Subscriptions</button>
+              <button className="bg-black text-white m-[2%] p-[2%] mt-[1%] w-[20%] rounded-md hover:shadow-2xl">Get Started</button>
+              <Link className="bg-white text-l text-black m-[2%] p-[2%] mt-[1%] w-[20%] rounded-md hover:shadow-2xl" to="/Subscriptions">Subscriptions<button
+              className="text-black"></button></Link>
               </div>
             </div>
             <div className="">
