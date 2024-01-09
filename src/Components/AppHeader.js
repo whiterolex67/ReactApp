@@ -4,10 +4,10 @@ const HeaderComponent = () => {
     const [Login,setLogin] = useState("Login🧓🏽");
     return (
     <div className = "flex justify-between text-white p-2 font-extrabold bg-black">
-        <div className="p-3">
+        <Link to = "/"><div className="p-3">
             <h1 className= "text-5xl tracking-widest"><span>P</span>AЯCEL</h1>
             <h1 className= "text-sm ml-[2%]">Chain of Cloud Kitchens</h1>
-        </div>
+        </div></Link>
         <div className="p-[1%]">
             <ul className="flex">
                <li className="p-2 text-xl hover:bg-white hover:text-black hover:rounded-lg"><Link to = "/">Home</Link></li>
