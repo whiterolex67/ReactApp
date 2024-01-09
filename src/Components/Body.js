@@ -2,7 +2,6 @@ import RestaurentCardComponent from "./KitchenCard";
 import ShimmerLoading from "./ShimmerLoading"
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Home from "./Home";
 const BodyComponent = () => {
     const [Restaurents,setRestaurents] = useState([]);
     const [SearchText,setSearchText] = useState("");
@@ -34,7 +33,7 @@ const BodyComponent = () => {
         return ShimmerLoading();
     }
     return (
-        <div className=" bg-green-200">
+        <div className="Kitchens">
             <div className = "flex">
             <div className="Search">
                     <input type ="text" value={SearchText} className="m-5 font-bold py-2 px-4 rounded-l bg-light_white outline-none" placeholder="Search                           🔎" 
