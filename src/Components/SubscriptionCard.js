@@ -2,8 +2,7 @@ const SubscriptionCard = (props) => {
   const {name,meals,prioDelivery,specialItems,customMeal,multiplePlaces,price} = props.Data;
     return(
         <div
-        className="relative flex flex-col bg-clip-border rounded-xl bg-gradient-to-tr from-gray-900 to-gray-800 text-white shadow-gray-900/20 shadow-md w-full max-w-[20rem] p-8 mr-[3%]
-        m-[10%]">
+        className="flex flex-col rounded-xl bg-gradient-to-tr from-gray-900 to-gray-800 text-white shadow-gray-900/20 shadow-md w-full p-8 m-[3%] mr-[3%]">
         <div
           className="relative pb-8 m-0 mb-8 overflow-hidden text-center text-gray-700 bg-transparent border-b rounded-none shadow-none bg-clip-border border-white/10">
           <p className="block text-sm antialiased leading-normal text-white uppercase">
