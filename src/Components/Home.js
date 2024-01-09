@@ -16,7 +16,7 @@ const Home = () => {
                 We have 100's of cloud kitchens which delivers quality indian food. Tastes Like Home
              </h2> 
               <h2 className="text-xl m-[2%]">
-                We are also Bringing up the monthly subscriptions
+                We also have monthly subscription based plans
               </h2>
               <div className="flex">
               <button className="bg-black text-white m-[2%] p-[2%] mt-[1%] w-[20%] rounded-md hover:shadow-2xl">Get Started</button>
