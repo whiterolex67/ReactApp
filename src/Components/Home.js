@@ -7,7 +7,7 @@ const Home = () => {
         return <Offline/>
     }
     return (
-        <div className="flex h-[100%] bg-green-200 mb-[0%]">
+        <div className="flex bg-green-200 mb-[0%]">
             <div className="m-[10%] mb-[0%]">
                <h1 className="text-8xl m-[2%]">
                  PARCEL
@@ -18,10 +18,10 @@ const Home = () => {
               <h2 className="text-xl m-[2%]">
                 We also have monthly subscription based plans
               </h2>
-              <div className="flex">
-              <button className="bg-black text-white m-[2%] p-[2%] mt-[1%] w-[20%] rounded-md hover:shadow-2xl">Get Started</button>
-              <Link className="bg-white text-l text-black m-[2%] p-[2%] mt-[1%] w-[20%] rounded-md hover:shadow-2xl" to="/Subscriptions">Subscriptions<button
-              className="text-black"></button></Link>
+              <div className="flex flex-auto">
+              <button className="bg-black text-white m-[2%] p-[2%] mt-[1%] rounded-md hover:shadow-2xl">Get Started</button>
+              <Link className="bg-white text-l text-black m-[2%] p-[2%] mt-[1%] rounded-md hover:shadow-2xl" to="/Subscriptions"><button
+              className="text-black p-[2%]">Subscriptions</button></Link>
               </div>
             </div>
             <div className="">
