@@ -23,16 +23,16 @@ const KitchenMenu = () => {
     const {name,areaName,avgRatingString,costForTwoMessage,totalRatingsString} = RestaurentBasicDetails;
     const cuisines = RestaurentBasicDetails.cuisines;
     return (
-        <div className="mt-[0%] bg-slate-50">
+        <div className="mt-[0%] bg-gray-400">
            <div className="">
            <h1 className="text-6xl text-center text-black">{name}</h1>
-           <h3 className="mt-[1%] ml-[25%] mr-[25%] text-center bg-yellow-50 text-black">{cuisines && cuisines.join(', ')}</h3>
+                <h3 className="mt-[1%] ml-[43%] mr-[43%] text-center bg-gray-900 rounded-lg text-white">{cuisines && cuisines.join(', ')}</h3>
            </div>
-           <div className="flex justify-between ml-[10%] mr-[10%] mt-[1%]">
-             <h3 className=" bg-yellow-50 text-black p-[1%]">{areaName}</h3>
-             <h3 className="bg-yellow-50 text-black p-[1%]">{costForTwoMessage}</h3>
-             <h3 className="bg-yellow-50 text-black p-[1%]">{avgRatingString} ⭐</h3>
-             <h3 className="bg-yellow-50 text-black p-[1%]">{totalRatingsString}</h3>
+           <div className="flex justify-between ml-[25%] mr-[25%] mt-[1%]">
+             <h3 className=" bg-gray-900 text-white p-[1%] rounded-lg">{areaName}</h3>
+             <h3 className="bg-gray-900 text-white p-[1%] rounded-lg">{costForTwoMessage}</h3>
+             <h3 className="bg-gray-900 text-white p-[1%] rounded-lg">{avgRatingString} ⭐</h3>
+             <h3 className="bg-gray-900 text-white p-[1%] rounded-lg">{totalRatingsString}</h3>
             </div>
             <div className="mt-[1%] flex">
                 <input className="w-[70%] p-[1%] ml-[25%] mr-[25%] outline-none border-2 text-black" value = {SearchText} onChange={(e)=>{

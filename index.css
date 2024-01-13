@@ -8,3 +8,9 @@
 .Kitchens{
     background-color: #F8485E;
 }
+#Minus{
+    display: none;
+}
+#Plus{
+    display: none;
+}
