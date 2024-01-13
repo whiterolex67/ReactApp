@@ -1,4 +1,4 @@
-import RestaurentCardComponent, {isBestSellerOrNot} from "./KitchenCard";
+import RestaurentCardComponent, {isBestSellerOrNot} from "./KitchenCard.js";
 import ShimmerLoading from "./ShimmerLoading"
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
