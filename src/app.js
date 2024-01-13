@@ -6,7 +6,6 @@ import { createBrowserRouter,RouterProvider,Outlet} from "react-router-dom";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Error from "./Components/Error"; 
-import Kitchens from "./Components/OurKitchens";
 import KitchenMenu from "./Components/KitchenMenu";
 import Home from "./Components/Home";
 import SubscriptionPage from "./Components/SubscriptionPage";

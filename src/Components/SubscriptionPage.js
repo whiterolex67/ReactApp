@@ -5,8 +5,7 @@ const SubscriptionPage = () => {
     const [Subscriptions,setSubscriptions] = useState([]);
     useEffect(()=>{
         setSubscriptions(SubscriptionDetails.Subscriptions);
-    },[])
-    console.log(Subscriptions);
+    },[]);
     return (
         <div className=" bg-black">
         <div className="flex bg-zinc-200">

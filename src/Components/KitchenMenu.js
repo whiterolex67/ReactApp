@@ -19,7 +19,6 @@ const KitchenMenu = () => {
         const MenuItemsJsonPath = MenuJson?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards;
         setRestaurentMenuDetails(MenuItemsJsonPath);
         setFilterMenuDetails(MenuItemsJsonPath);
-        console.log(MenuItemsJsonPath);
     }
     const {name,areaName,avgRatingString,costForTwoMessage,totalRatingsString} = RestaurentBasicDetails;
     const cuisines = RestaurentBasicDetails.cuisines;
@@ -36,7 +35,7 @@ const KitchenMenu = () => {
              <h3 className="bg-yellow-50 text-black p-[1%]">{totalRatingsString}</h3>
             </div>
             <div className="mt-[1%] flex">
-                <input className="w-[70%] p-[1%] ml-[25%] mr-[25%] outline-none bg-slate-800 text-white" value = {SearchText} onChange={(e)=>{
+                <input className="w-[70%] p-[1%] ml-[25%] mr-[25%] outline-none border-2 text-black" value = {SearchText} onChange={(e)=>{
                     setSearchText(e.target.value);
                     setFilterMenuDetails(RestaurentMenuDetails.filter((Menu) =>
                         Menu.card.info.name.toLowerCase().includes(e.target.value.toLowerCase()) 
