@@ -23,8 +23,8 @@ const MenuItem = (props) => {
                             setCartState(Clicks)
                             console.log("Minus")
                         }
-                    }className="mr-[25%] text-3xl" id="Minus">-</span>
-                    <Button className="p-2 w-32 absolute ml-2 mt-[6.5%] bg-gray-100 text-black border-2 border-gray-500 text-xl" onClick={
+                    }className="mr-[25%] text-md absolute ml-2 p-2 w-32" id="Minus">-</span>
+                    <Button className="p-2 w-32 absolute ml-2 mt-[6.5%] bg-gray-100 text-black border-2 border-gray-500 text-md" onClick={
                         () => {
                             const m = document.getElementById("Minus")
                             m.style.display = "flex"
@@ -46,7 +46,7 @@ const MenuItem = (props) => {
                             setCartState(Clicks)
                             console.log("Plus")
                         }
-                    }className="mr-[25%] text-3xl" id="Plus">+</span>
+                    }className="mr-[25%] text-md absolute ml-2 p-2 w-32" id="Plus">+</span>
                     <img className=" w-36 h-36" src = {FoodPics + MenuData.imageId}/>
                 </div>
             </div>

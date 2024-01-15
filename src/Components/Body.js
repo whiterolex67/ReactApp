@@ -33,10 +33,10 @@ const BodyComponent = () => {
         const updatedJsonData = jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
         setRestaurents(updatedJsonData);
         setFilteredRestaurents(updatedJsonData);
-        console.log(jsonData.data.cards);
+        console.log(updatedJsonData);
     }
     if(Restaurents.length == 0){
-        return ShimmerLoading();
+        return <ShimmerLoading/>
     }
     return (
         <div className="">
