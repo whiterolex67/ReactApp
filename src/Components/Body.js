@@ -2,7 +2,7 @@ import RestaurentCardComponent, {isBestSellerOrNot} from "./KitchenCard.js";
 import ShimmerLoading from "./ShimmerLoading"
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import {Button,Input,} from "@material-tailwind/react";
+import {Button,Input,Breadcrumbs,} from "@material-tailwind/react";
 const BodyComponent = () => {
     const [Restaurents,setRestaurents] = useState([]);
     const [SearchText,setSearchText] = useState("");
@@ -40,6 +40,21 @@ const BodyComponent = () => {
     }
     return (
         <div className="">
+    <Breadcrumbs className="m-5">
+        <Link to = "/" className="opacity-60">
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-4 w-4"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            >
+            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+            </svg>
+        </Link>
+        <Link to = '/ourKitchens' className="opacity-60">
+            <span>Our Kitchens</span>
+        </Link>
+    </Breadcrumbs>
             <div className = "flex">
             <div className=" w-96 mt-3 ml-4">
                     <Input type ="text" value={SearchText} className="" label="Search" 
