@@ -5,12 +5,30 @@ import {
     CardFooter,
     Typography,
     Tooltip,
+    Breadcrumbs,
   } from "@material-tailwind/react";
+  import { Link } from "react-router-dom";
 import React from "react";
 const About = () => {
     return (
+        <div>
+            <Breadcrumbs className="m-5">
+            <Link to = "/" className="opacity-60">
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                >
+                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                </svg>
+            </Link>
+            <Link to = '' className="opacity-60">
+                <span>About Us</span>
+            </Link>
+    </Breadcrumbs>
         <div className="flex m-[25%] mt-[5%]">
-      <Card className="w-96 border-4 border-gray-900 mb-[2%] mr-[15%]">
+      <Card className="w-96 border-4 border-gray-900 mb-[2%] mr-[15%] transform hover:scale-105">
       <CardHeader floated={false} className="h-80">
         <img src="https://i.ibb.co/jrgGmqm/1699762229295.jpg" alt="profile-picture" />
       </CardHeader>
@@ -59,7 +77,7 @@ const About = () => {
       </CardFooter>
     </Card>
     {/* sathwik */}
-    <Card className="w-96 border-4 border-gray-900 mb-[2%]">
+    <Card className="w-96 border-4 border-gray-900 mb-[2%] transform hover:scale-105">
       <CardHeader floated={false} className="h-80">
         <img src="https://i.ibb.co/TK2LJjn/IMG-2120.jpg" alt="profile-picture" />
       </CardHeader>
@@ -107,6 +125,7 @@ const About = () => {
         </Tooltip>
       </CardFooter>
     </Card>
+        </div>
         </div>
     )
 }

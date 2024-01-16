@@ -1,6 +1,7 @@
 import useOnlineStatus from "../utils/useOnlineStatus";
 import Offline from "./offline";
 import { Link } from "react-router-dom";
+import { Player } from "@lottiefiles/react-lottie-player";
 const Home = () => {
     const onlineStatus = useOnlineStatus();
     if(onlineStatus == false){
@@ -26,6 +27,9 @@ const Home = () => {
             </div>
             <div className="">
             <img src="https://i.postimg.cc/0yM0ZVJg/23785080-6857793-removebg.png"/>
+            {/* <Player src = "https://lottie.host/55cd6638-b99b-42c8-bf65-d4570856d643/oItDTAmbSn.json"  className="player" loop autoplay style = {{
+              width : "100%",height : '100%',
+            }}/> */}
             </div>
         </div>
     )
